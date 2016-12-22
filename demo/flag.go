@@ -48,6 +48,8 @@ func init() {
 	// flag.Value has set() method
 	flag.Var(&intervalFlag, "delta", "Time Duration")
 
+	flag.Usage()
+
 }
 
 func main() {
