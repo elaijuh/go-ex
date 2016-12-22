@@ -48,13 +48,15 @@ func init() {
 	// flag.Value has set() method
 	flag.Var(&intervalFlag, "delta", "Time Duration")
 
-	flag.Usage()
-
 }
 
 func main() {
 	flag.Parse()
 
+	// Print flags after they are processed
 	fmt.Printf("%s, %d, %s\n", *stringFlag, intFlag, intervalFlag)
+
+	// Print arguments which are not flagged
+	fmt.Println(flag.Args())
 
 }
